@@ -1,0 +1,33 @@
+# MySQL 配置
+mysql:
+  host: 127.0.0.1             # 数据库主机地址
+  port: 3306                  # 数据库主机端口
+  user: user                  # 数据库用户名
+  password: "123456password"  # 数据库密码
+  database:                   # 要监控备份的数据库
+    - database1
+    - database2
+
+# 备份配置
+backup_path: "../../backup"
+
+# 日志配置
+logs:
+  max_retention_days: 90  # 最大日志保存天数
+  logs_path: "../../logs" # 日志路径
+  is_log_to_console: True # 是否再控制台中输出日志
+
+# 邮件配置
+email:
+  send_by: "example@example.com"    # 发送者
+  send_to:                          # 接收者
+    - "example@example.com"
+    - "example@example.com"
+  smtp_password: "smtp"             # smtp 服务密钥(不要改)
+  mail_host: "smtp.xxxx.com"        # 邮箱第三方发送服务器地址(不要改)
+  port: 123                         # 邮箱第三方发送服务器端口号(不要改)、
+
+# 服务器配置
+host: "127.0.0.1" # 主机地址
+port: 5000        # 端口号
+debug: False       # debug 模式
